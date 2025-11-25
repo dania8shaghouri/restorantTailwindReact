@@ -1,0 +1,29 @@
+.btn::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  background-color: var(--gold-crayola);
+  transition: var(--transition-2);
+  z-index: -1;
+}
+
+.btn:hover::before,
+.btn:focus-visible::before {
+  bottom: -50%;
+}
+
+.btn:hover .text-1,
+.btn:focus-visible .text-1 {
+  transform: translateY(-40px);
+}
+
+.btn:hover .text-2,
+.btn:focus-visible .text-2 {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
