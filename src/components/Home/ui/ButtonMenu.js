@@ -4,24 +4,24 @@ export default function ButtonMenu({ href, text }) {
     <a
       href={href}
       className="
-        font-bold
         uppercase
         max-w-max
         btn relative
         bg-[var(--gold-crayola)]
         text-[var(--black)]
-        text-[var(--fontSize-label-2)]
+        text-[length:var(--fontSize-label-2)]
         tracking-[var(--letterSpacing-5)]
+        font-[var(--weight-bold)]
         border-2 border-[var(--gold-crayola)]
-        px-2.5 py-1.5
+        py-[8px] px-[7px]
         overflow-hidden
         float-right
         rounded-[20px]
-        z-[1]
+        z-[1] mx-auto mt-[26px]
         
       "
     >
-      <span className="text text-1 transition-all duration-300">{text}</span>
+      <span className="text-xs text text-1 transition-all duration-300">{text}</span>
 
       <span
         className="
