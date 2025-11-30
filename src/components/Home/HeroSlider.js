@@ -33,7 +33,7 @@ function HeroSlider() {
 
       {/* Book a Table */}
       <a
-        href="#"
+        href="/menu"
         className="
           absolute bottom-[15px] right-[15px] z-20
           bg-[var(--gold-crayola)]
