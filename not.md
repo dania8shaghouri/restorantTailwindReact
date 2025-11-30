@@ -19,3 +19,4 @@
      ➡ Buton gereksiz yere tüm satırı kaplamaz
      ➡ Sadece içindeki yazı kadar yer kaplar
     
+5rem = 80px)

@@ -48,20 +48,28 @@ export default function MenuItems() {
       className=" relative px-4 me-[50px]
     py-[var(--section-space)] 
     grid gap-10 grid-cols-1  
-    md:grid-cols-2 lg:grid-cols-2"
+    md:grid-cols-2 lg:grid-cols-2
+             md:after:content-[''] md:after:absolute 
+             after:top-0 after:left-1/2 
+             after:h-full after:border-l
+          after:border-[var(--white-alpha-20)] lg:after:ml-12
+          
+    "
     >
       {menuData.map((item, index) => (
         <div
           key={index}
-          className="me-[50px] flex flex-start items-start gap-5 lg:flex-row"
+          className="flex flex-start items-start me-8 gap-5 lg:flex-row
+             xl:mb-7 mx-auto xl:max-w-[1200px] w-full
+             xl:gap-y-14 xl:mx-[170px]
+           "
         >
           {/* Resim */}
           <figure
             className="
             aspect-[var(--width)/var(--height)]  
             overflow-hidden                        
-            bg-[var(--eerie-black-4)]               
-            md:w-1/2 lg:w-1/2                       
+            bg-[var(--eerie-black-4)]                                  
             rounded-[var(--radius-24)]              
   "
           >
@@ -72,7 +80,8 @@ export default function MenuItems() {
               className="
       w-full h-full          
       object-cover           
-      shrink-0               
+      shrink-0        
+         
     "
             />
           </figure>
