@@ -13,7 +13,7 @@ export default function ButtonMenu({ href, text }) {
         tracking-[var(--letterSpacing-5)]
         font-[var(--weight-bold)]
         border-2 border-[var(--gold-crayola)]
-        py-[8px] px-[7px]
+        py-[5px] px-[10px]
         overflow-hidden
         float-right
         rounded-[20px]

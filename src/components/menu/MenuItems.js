@@ -42,9 +42,14 @@
 import ButtonMenu from "../Home/ui/ButtonMenu";
 import { menuData } from "../../data/menuData";
 
-export default function Menu() {
+export default function MenuItems() {
   return (
-    <section className=" z-1 relative py-[var(--section-space)] grid gap-10 grid-cols-1  md:grid-cols-2 lg:grid-cols-2">
+    <section
+      className=" relative px-4 me-[50px]
+    py-[var(--section-space)] 
+    grid gap-10 grid-cols-1  
+    md:grid-cols-2 lg:grid-cols-2"
+    >
       {menuData.map((item, index) => (
         <div
           key={index}
@@ -74,22 +79,6 @@ export default function Menu() {
 
           {/* İçerik */}
           <div className=" lg:w-1/2 ">
-            {/* <div className=" flex justify-between items-center mb-2 relative">
-              <h3
-                className="text-[var(--white)]
-               font-[var(--weight-regular)] 
-               leading-[var(--lineHeight-2)]"
-              >
-                {item.title}
-              </h3>
-              <span
-                className="relative flex items-center gap-3 pr-8 mb-[10px] 
-              text-[var(--gold-crayola)]
-              after:content-[''] after:absolute after:border  after:border-[var(--white-alpha-20)] after:-translate-y-1/2"
-              >
-                {item.price}
-              </span>
-            </div> */}
             <div className="flex items-center mb-2">
               {/* Title */}
               <h3
