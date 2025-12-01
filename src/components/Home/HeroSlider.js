@@ -36,6 +36,7 @@ function HeroSlider() {
         href="/menu"
         className="
           absolute bottom-[15px] right-[15px] z-20
+          
           bg-[var(--gold-crayola)]
           w-[130px] h-[130px] scale-[0.6]
           flex flex-col items-center justify-center

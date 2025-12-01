@@ -1,44 +1,3 @@
-// import ButtonMenu from "../Home/ui/ButtonMenu";
-// export default function MenuItems({ item }) {
-//   return (
-//     <section className="grid gap-10 grid-cols-1 lg:grid-cols-2 ">
-//       <div className=" flex items-start gap-5">
-//         <img
-//           className="rounded-[var(--radius-24)]
-//           "
-//           src={item.img}
-//           alt={item.title}
-//         />
-
-//         <div className="px-4">
-//           <h3
-//             className="text-[var(--white)]
-//           font-[var(--weight-regular)]
-//           leading-[var(--lineHeight-2)]"
-//           >
-//             {item.title}
-//           </h3>
-
-//           <h3
-//             className="text-[var(--gold-crayola)]
-//           float-right my-2.5"
-//           >
-//             {item.price}
-//           </h3>
-
-//           <p
-//             className="text-[var(--quick-silver)]
-//           leading-[var(--lineHeight-4)]"
-//           >
-//             {item.description}
-//           </p>
-//         </div>
-//       </div>
-//       <ButtonMenu href="#" text="order" />
-//     </section>
-//   );
-// }
-
 import ButtonMenu from "../Home/ui/ButtonMenu";
 import { menuData } from "../../data/menuData";
 
@@ -59,18 +18,22 @@ export default function MenuItems() {
       {menuData.map((item, index) => (
         <div
           key={index}
-          className="flex flex-start items-start me-8 gap-5 lg:flex-row
+          className="group flex flex-start items-start me-8 gap-5 lg:flex-row
              xl:mb-7 mx-auto xl:max-w-[1200px] w-full
-             xl:gap-y-14 xl:mx-[170px]
+             xl:gap-y-14 xl:mx-[160px]
            "
         >
           {/* Resim */}
+
           <figure
             className="
             aspect-[var(--width)/var(--height)]  
             overflow-hidden                        
             bg-[var(--eerie-black-4)]                                  
-            rounded-[var(--radius-24)]              
+            rounded-[var(--radius-24)]  
+            group-hover:bg-[var(--gold-crayola)]
+            
+                        
   "
           >
             <img
@@ -81,7 +44,9 @@ export default function MenuItems() {
       w-full h-full          
       object-cover           
       shrink-0        
-         
+      
+         transition-all duration-300
+        group-hover:scale-110
     "
             />
           </figure>

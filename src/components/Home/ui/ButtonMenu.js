@@ -21,7 +21,9 @@ export default function ButtonMenu({ href, text }) {
         
       "
     >
-      <span className="text-xs text text-1 transition-all duration-300">{text}</span>
+      <span className="text-xs text text-1 transition-all duration-300 ">
+        {text}
+      </span>
 
       <span
         className="
@@ -31,6 +33,7 @@ export default function ButtonMenu({ href, text }) {
           text-[var(--smoky-black-1)]
           transition-all duration-300
           whitespace-nowrap
+          text-xs
         "
         aria-hidden="true"
       >
