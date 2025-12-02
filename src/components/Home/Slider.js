@@ -18,10 +18,16 @@ function Slider({ slide, isActive }) {
       />
 
       {/* Text Container */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center px-10 text-white">
+      <div
+        className="text-center
+      absolute inset-0 flex flex-col justify-center items-center px-10 text-white"
+      >
         {/* Subtitle */}
         <p
-          className={`relative font-bold uppercase tracking-[var(--letterSpacing-2)] text-[var(--gold-crayola)] mb-3
+          className={`relative font-bold uppercase
+            text-xs sm:text-sm  md:text-lg
+            tracking-[var(--letterSpacing-2)] 
+            text-[var(--gold-crayola)] mb-3
           transition-opacity duration-700 delay-100 ${
             isActive ? "opacity-100" : "opacity-0"
           }`}
@@ -36,7 +42,7 @@ function Slider({ slide, isActive }) {
 
         {/* Title */}
         <h1
-          className={`text-6xl font-bold mb-4 whitespace-pre-line
+          className={` md:text-6xl font-bold mb-4 md:whitespace-pre-line 
           [font-family:var(--fontFamily-forum)]
           transition-opacity duration-700 delay-300 ${
             isActive ? "opacity-100" : "opacity-0"

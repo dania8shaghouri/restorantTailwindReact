@@ -6,7 +6,7 @@ import shape2 from "../assets/img/shape-5.png";
 import separator from "../assets/img/separator.svg";
 function Menu() {
   return (
-    <section className=" relative  bg-[var(--eerie-black-1)] ">
+    <section className=" relative min-h-screen bg-[var(--eerie-black-1)] ">
       <p
         className={`relative z-10 text-xs text-center py-10 font-bold uppercase tracking-[var(--letterSpacing-2)] text-[var(--gold-crayola)] 
           `}
@@ -44,7 +44,7 @@ function Menu() {
 
       <MenuItems />
       <p
-        className="text-center my-9 
+        className="relative z-10 text-center my-7 
       text-[length:var(--fontSize-body-4)]
       text-[var(--white)]"
       >
