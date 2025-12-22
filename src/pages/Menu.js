@@ -45,7 +45,7 @@ function Menu() {
 
       <MenuItems />
       <p
-        className="relative z-10 text-center my-7
+        className="relative z-10 text-center mt-7
       text-[length:var(--fontSize-body-4)]
       text-[var(--white)]"
       >

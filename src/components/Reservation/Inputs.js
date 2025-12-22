@@ -1,15 +1,35 @@
 export default function Input({ icon: Icon, type = "text", placeholder }) {
+  const isDateTime = type === "datetime-local";
+
   return (
-    <div className="relative w-full">
-      {Icon && <Icon className="absolute left-3 top-3 text-gray-400 text-xl" />}
+    <div className={`relative ${isDateTime ? "group" : ""}`}>
+      {Icon && (
+        <Icon
+          className={` text-[var(--white)]
+            absolute left-5 top-10 text-xl transition-colors
+            ${
+              isDateTime
+                ? " group-focus-within:text-[var(--white)] "
+                : "text-[var(--white)]"
+            }
+          `}
+        />
+      )}
 
       <input
         type={type}
         placeholder={placeholder}
-        className="w-full p-3 pl-10 rounded bg-black/50 text-white 
-                   placeholder-gray-400 outline-none focus:ring-2 
-                   focus:ring-yellow-500"
+        className={`
+          bg-[var(--eerie-black-2)] text-[var(--white)]
+          border border-[var(--white-alpha-10)]
+          px-5 py-5 w-full
+          mx-2 my-4 outline-none
+          focus:border-[var(--gold-crayola)]
+          ${isDateTime ? "pl-12 " : ""}
+        `}
       />
+      
     </div>
+    
   );
 }
