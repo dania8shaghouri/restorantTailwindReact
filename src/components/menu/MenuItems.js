@@ -18,7 +18,8 @@ export default function MenuItems() {
       {menuData.map((item, index) => (
         <div
           key={index}
-          className="group flex flex-start items-start me-8 gap-4 lg:flex-row
+          className="group flex flex-start items-start me-8 gap-4 
+          lg:flex-row
              xl:mb-6 mx-auto xl:max-w-[1200px] w-full
              xl:gap-y-14 xl:mx-[140px]
            "

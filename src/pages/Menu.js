@@ -4,25 +4,26 @@ import MenuItems from "../components/menu/MenuItems";
 import shape1 from "../assets/img/shape-6.png";
 import shape2 from "../assets/img/shape-5.png";
 import separator from "../assets/img/separator.svg";
+
 function Menu() {
   return (
     <section className=" relative min-h-screen bg-[var(--eerie-black-1)] ">
       <p
-        className={`relative z-10 text-xs text-center py-10 font-bold uppercase tracking-[var(--letterSpacing-2)] text-[var(--gold-crayola)] 
+        className={`relative z-10 text-xs text-center py-10 font-bold uppercase tracking-[var(--letterSpacing-2)] text-[var(--gold-crayola)]
           `}
       >
         Special Selection
-        <img src={separator} alt="" className="block w-[100px] mx-auto py-4" />
+        <img src={separator} alt="" className=" w-[100px] mx-auto py-4" />
       </p>
+
       <h2
-        className="my-5 text-center
-    text-[var(--white)]             
-    text-[length:var(--fontSize-headline-1)] 
-    font-[length:var(--fontFamily-forum)]   
-    font-[var(--weight-regular)]     
-    leading-[var(--lineHeight-2)]  
-    relative z-10 
-  "
+        className="my-5 relative z-10 text-center 
+      text-[var(--white)]
+      text-[length:var(--fontSize-headline-1)]
+      font-[length:var(--fontFamily-forum)]
+      font-[var(--weight-regular)]
+      leading-[var(--lineHeight-2)]
+      "
       >
         Delicious Menu
       </h2>
@@ -44,7 +45,7 @@ function Menu() {
 
       <MenuItems />
       <p
-        className="relative z-10 text-center my-7 
+        className="relative z-10 text-center my-7
       text-[length:var(--fontSize-body-4)]
       text-[var(--white)]"
       >
