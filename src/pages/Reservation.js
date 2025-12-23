@@ -2,13 +2,14 @@ import Inputs from "../components/Reservation/Inputs";
 import { formFields } from "../data/formFields ";
 import { selects } from "../data/formFields ";
 import { datetimeInput } from "../data/formFields ";
+import Button from "../components/Home/ui/Button";
 
-export default function Reservation() {
+export default function Reservation(isActive) {
   return (
     <section
       id="masa"
       className="p-20
-     bg-[var(--eerie-black-1)]"
+     bg-[var(--eerie-black-1)] "
     >
       <div
         className="mt-[-27px]
@@ -32,7 +33,7 @@ export default function Reservation() {
           or fill out the order form
         </p>
 
-        <div className="flex flex-col">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4">
           {formFields.map((f, i) => (
             <Inputs key={i} {...f} />
           ))}
@@ -68,7 +69,14 @@ export default function Reservation() {
     focus:border-[var(--gold-crayola)]
   "
         ></textarea>
-        
+        <Button
+          href="#"
+          text="Book a table"
+          className="w-full transition-colors
+    duration-1000
+    ease-out hover:bg-[var(--gold-crayola)]
+"
+        />
       </div>
     </section>
   );

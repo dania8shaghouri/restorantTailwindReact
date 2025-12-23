@@ -1,4 +1,5 @@
-/* arka plan animasyonu */
+
+
 .btn::before {
   content: "";
   position: absolute;
@@ -8,14 +9,19 @@
   width: 200%;
   height: 200%;
   border-radius: 50%;
-  background-color: var(--gold-crayola);
+  background-color: var(--smoky-black-1);
   transition: var(--transition-2);
   z-index: -1;
 }
-
 .btn:hover::before,
 .btn:focus-visible::before {
   bottom: -50%;
+}
+
+.btn .text-2 {
+  top: 150%;
+  opacity: 0;
+  color: var(--white);
 }
 
 /* Yazıların gizlenip görünmesi */
@@ -27,5 +33,7 @@
 .btn:hover .text-2,
 .btn:focus-visible .text-2 {
   top: 50%;
+  opacity: 1;
   transform: translate(-50%, -50%);
 }
+
