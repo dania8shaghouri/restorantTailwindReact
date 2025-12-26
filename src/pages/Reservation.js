@@ -116,26 +116,20 @@ export default function Reservation(isActive) {
         text-center
         text-white
         mt-10
-  lg:mt-0
+        lg:mt-0
       "
         >
           <h1
             className="
-    text-center
-    text-[var(--white)]
-    
-    leading-[var(--lineHeight-2)]
-    font-forum
-    mb-7
-
-          text-[length:var(--fontSize-headline-2)]
-
+           text-center
+           text-[var(--white)]
+           leading-[var(--lineHeight-2)]
+           font-forum
+           mb-7 text-[length:var(--fontSize-headline-2)]
           font-regular
           text-2xl
           sm:text-3xl
           lg:text-[length:var(--fontSize-headline-2)]
-    
-    
   "
           >
             Contact Us
@@ -152,8 +146,7 @@ export default function Reservation(isActive) {
 
           <div
             className="w-2 h-2 border border-[var(--gold-crayola)] rotate-45
-            my-5 mx-auto
-"
+            my-5 mx-auto"
           ></div>
 
           <p className="mb-2">Location</p>
