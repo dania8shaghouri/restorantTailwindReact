@@ -5,7 +5,7 @@ export default function Button({ href, text, className = "" }) {
     <a
       href={href}
       className={`
-        inline-flex  
+        inline-flex  text-center
         uppercase
         justify-center
         items-center
@@ -17,6 +17,8 @@ export default function Button({ href, text, className = "" }) {
         text-[length:var(--fontSize-label-2)]
         tracking-[var(--letterSpacing-5)]
         border-2 border-[var(--gold-crayola)]
+        text-xs sm:text-sm md:text-lg 
+
 
         ${className}
       `}

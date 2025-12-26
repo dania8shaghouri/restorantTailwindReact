@@ -6,121 +6,11 @@ import Button from "../components/Home/ui/Button";
 
 export default function Reservation(isActive) {
   return (
-    //     <section
-    //       className="p-20
-    //      bg-[var(--eerie-black-1)]
-    //      grid grid-cols-1
-    //       md:grid-cols-[1fr_0.5fr]
-
-    //      "
-    //     >
-    //       <section
-    //         id="masa"
-    //         className="
-
-    //       bg-[var(--smoky-black-2)]
-    //      grid grid-cols-1 md:grid-cols-2 gap-[45px]
-    //      "
-    //       >
-    //         <div
-    //           className="mt-[-27px]
-    //         pt-[40px] px-[20px] pb-[30px]
-    //         "
-    //         >
-    //           <h1
-    //             className="text-center
-    //         text-[var(--white)]
-    //         text-[length:var(--fontSize-headline-1)]
-    //         leading-[var(--lineHeight-2)]
-    //         "
-    //           >
-    //             Online Reservation
-    //           </h1>
-    //           <p className="text-center text-sm text-[var(--white)] mb-6 mt-3">
-    //             Booking request{" "}
-    //             <a href="tel:+5301118800" className="text-[var(--gold-crayola)] ">
-    //               +530 111 88 00
-    //             </a>{" "}
-    //             or fill out the order form
-    //           </p>
-
-    //           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4">
-    //             {formFields.map((f, i) => (
-    //               <Inputs key={i} {...f} />
-    //             ))}
-
-    //             {selects.map((select, i) => (
-    //               <div key={i} className="relative ml-2 my-4">
-    //                 <select.icon className="absolute left-3 top-1/2 -translate-y-1/2 text-xl text-[var(--white)]" />
-    //                 <select className="w-full bg-[var(--eerie-black-2)] text-[var(--white)] border border-[var(--white-alpha-10)] px-12 py-5 focus:border-[var(--gold-crayola)]">
-    //                   {select.options.map((opt, idx) => (
-    //                     <option key={idx}>{opt}</option>
-    //                   ))}
-    //                 </select>
-    //               </div>
-    //             ))}
-
-    //             <Inputs
-    //               icon={datetimeInput.icon}
-    //               type="datetime-local"
-    //               placeholder="Select Date & Time"
-    //             />
-    //           </div>
-    //           <textarea
-    //             placeholder="Message"
-    //             rows={4}
-    //             className="
-    //     bg-[var(--eerie-black-2)]
-    //     text-[var(--white)]
-    //     border border-[var(--white-alpha-10)]
-    //     px-5 py-5 w-full
-    //     mx-2 my-4
-    //     outline-none
-    //     resize-none
-    //     focus:border-[var(--gold-crayola)]
-    //   "
-    //           ></textarea>
-    //           <Button
-    //             href="#"
-    //             text="Book a table"
-    //             className="w-full transition-colors
-    //     duration-1000
-    //     ease-out hover:bg-[var(--gold-crayola)]
-    // "
-    //           />
-    //         </div>
-
-    //         <div
-    //           className=" pt-[40px] px-[20px] pb-[30px]
-    //         text-center
-    //         text-white
-    //         "
-    //         >
-    //           <h1 className="text-white text-2xl ">Contact Us</h1>
-    //           <p>Booking Request</p>
-
-    //           <a href="tel:+5301118800">+ 530 111 88 00</a>
-
-    //           <div class="separator"></div>
-
-    //           <p>Location</p>
-
-    //           <address>Restaurant Sk, Deniz City, Bursa 9578, Turkey</address>
-
-    //           <p>Lunch Time</p>
-
-    //           <p>Monday to Sunday 11.00 am - 2.30pm</p>
-
-    //           <p>Dinner Time</p>
-
-    //           <p>Monday to Sunday 05.00 pm - 10.00pm</p>
-    //         </div>
-    //       </section>
-    //     </section>
-
     <section
       className="
-    p-20
+     px-4 py-10
+    sm:px-8
+    lg:p-20
     bg-[var(--eerie-black-1)]
     flex justify-center items-center
     min-h-screen
@@ -128,27 +18,30 @@ export default function Reservation(isActive) {
   "
     >
       <section
-        className=" py-[75px] px-[60px]
-      bg-[var(--smoky-black-2)]
-      grid grid-cols-1 lg:grid-cols-2 gap-[45px]
-      max-w-7xl w-full
-      shadow-lg
+        className=" 
+            py-10 px-4
+    sm:px-8
+    lg:py-[75px] lg:px-[60px]
+    bg-[var(--smoky-black-2)]
+    grid grid-cols-1 lg:grid-cols-2
+    gap-6 sm:gap-8 lg:gap-[80px]
+    max-w-7xl w-full
+    shadow-lg
       
     "
       >
-        <div
-          className="
-         
-        min-w-max 
-      "
-        >
+        <div className="">
           <h1
-            className="text-center 
+            className="
+          text-center 
           text-[var(--white)]
           text-[length:var(--fontSize-headline-2)]
           leading-[var(--lineHeight-2)]
           font-forum
           font-regular
+          text-2xl
+          sm:text-3xl
+          lg:text-[length:var(--fontSize-headline-2)]
         "
           >
             Online Reservation
@@ -167,9 +60,20 @@ export default function Reservation(isActive) {
             ))}
 
             {selects.map((select, i) => (
-              <div key={i} className="relative ml-2 my-4">
+              <div key={i} className="relative  my-4">
                 <select.icon className="absolute left-3 top-1/2 -translate-y-1/2 text-xl text-[var(--white)]" />
-                <select className="w-full bg-[var(--eerie-black-2)] text-[var(--white)] border border-[var(--white-alpha-10)] px-12 py-5 focus:border-[var(--gold-crayola)]">
+                <select
+                  className="w-full bg-[var(--eerie-black-2)] text-[var(--white)] 
+                  border border-[var(--white-alpha-10)] 
+                  focus:border-[var(--gold-crayola)]
+                  text-base
+                  sm:text-lg
+                  placeholder:text-sm
+                  px-8 py-5 
+                  sm:px-10 sm:py-6 sm:-my-0
+                  my-3  outline-none
+                 "
+                >
                   {select.options.map((opt, idx) => (
                     <option key={idx}>{opt}</option>
                   ))}
@@ -191,7 +95,7 @@ export default function Reservation(isActive) {
           text-[var(--white)]
           border border-[var(--white-alpha-10)]
           px-5 py-5 w-full
-          mx-2 my-4
+           my-4
           outline-none
           resize-none
           focus:border-[var(--gold-crayola)]
@@ -208,19 +112,29 @@ export default function Reservation(isActive) {
         </div>
 
         <div
-          className="  pl-24
+          className="  pl-15
         text-center
         text-white
+        mt-10
+  lg:mt-0
       "
         >
           <h1
             className="
     text-center
     text-[var(--white)]
-    text-[length:var(--fontSize-headline-1)]
+    
     leading-[var(--lineHeight-2)]
     font-forum
-    mb-5
+    mb-7
+
+          text-[length:var(--fontSize-headline-2)]
+
+          font-regular
+          text-2xl
+          sm:text-3xl
+          lg:text-[length:var(--fontSize-headline-2)]
+    
     
   "
           >
@@ -231,14 +145,18 @@ export default function Reservation(isActive) {
 
           <a
             href="tel:+5301118800"
-            className="text-[var(--gold-crayola)] text-xl"
+            className="text-[var(--gold-crayola)] text-2xl"
           >
             + 530 111 88 00
           </a>
 
-          <div class="separator"></div>
+          <div
+            className="w-2 h-2 border border-[var(--gold-crayola)] rotate-45
+            my-5 mx-auto
+"
+          ></div>
 
-          <p className="mb-5">Location</p>
+          <p className="mb-2">Location</p>
 
           <address
             className="
@@ -252,7 +170,7 @@ export default function Reservation(isActive) {
             <span className="block">Bursa 9578, Turkey</span>
           </address>
 
-          <p>Lunch Time</p>
+          <p className="mb-2">Lunch Time</p>
 
           <p
             className="
@@ -266,7 +184,7 @@ export default function Reservation(isActive) {
             <span className="block">11.00 am - 2.30pm</span>
           </p>
 
-          <p className="mb-5">Dinner Time</p>
+          <p className="mb-2">Dinner Time</p>
 
           <p
             className="    mb-6
