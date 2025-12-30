@@ -33,6 +33,7 @@ export default function Footer() {
           className="
             col-span-2 md:col-span-2
             lg:col-span-1 lg:col-start-2
+            order-1 lg:order-2
             flex flex-col items-center text-center gap-4
             bg-[var(--smoky-black-1)]
             bg-[url('/form-pattern.png')]
@@ -102,12 +103,19 @@ export default function Footer() {
         {/* FOOTER LINKS */}
         <ul
           className="col-span-2 md:col-span-1
-          lg:col-span-1
-          flex flex-col gap-4 text-center 
-        "
+          lg:col-span-1 lg:col-start-1
+          order-2 lg:order-1 mt-[105px]
+          flex flex-col gap-9 text-center"
         >
           {FooterLinks.map((item, index) => (
-            <li key={index}>
+            <li
+              className="
+              text-xs
+              font-[var(--weight-bold)]
+              tracking-[var(--letterSpacing-4)]
+              "
+              key={index}
+            >
               <Link to={item.to} className="hover:text-[var(--gold-crayola)]">
                 {item.label}
               </Link>
@@ -117,13 +125,19 @@ export default function Footer() {
 
         {/* SOCIAL LINKS */}
         <ul
-          className="col-span-2 md:col-span-1 lg:col-span-1
-          
-          flex flex-col gap-4 text-center 
-        "
+          className="col-span-2 md:col-span-1 
+          lg:col-span-1 lg:col-start-3
+          order-3 mt-[105px]
+          flex flex-col gap-9 text-center"
         >
           {mediaLinks.map((item, index) => (
-            <li key={index}>
+            <li
+              className="
+              text-xs
+              font-[var(--weight-bold)]
+              tracking-[var(--letterSpacing-4)]"
+              key={index}
+            >
               <a
                 href={item.to}
                 target="_blank"
