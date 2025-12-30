@@ -20,12 +20,15 @@ export default function Footer() {
           relative z-10
           grid grid-cols-2 gap-y-12 gap-x-8
           md:grid-cols-2
-          lg:grid-cols-3
-          w-[90%] max-w-6xl
+          lg:grid-cols-3 
+          w-full
+          lg:min-w-full lg:max-h-[100vh]
+           md:max-w-3xl
           mx-auto
-          py-24
+          py-20 
           text-[var(--quick-silver)]
-          text-sm uppercase
+          text-sm uppercase 
+          
         "
       >
         {/* BRAND — grid-column: 1 / 3 */}
@@ -38,14 +41,15 @@ export default function Footer() {
             bg-[var(--smoky-black-1)]
             bg-[url('/form-pattern.png')]
             bg-top bg-repeat
-            px-10 py-12
+            px-10 py-14
+            
           "
         >
           <Link to="/">
             <img src={logo} alt="Resto home" loading="lazy" />
           </Link>
 
-          <address className="not-italic flex flex-col gap-2">
+          <address className="not-italic flex flex-col gap-3 mt-5">
             <span>Restaurant Sk, Deniz City, Bursa 9578, Turkey</span>
             <a href="mailto:lezzetg@restaurant.com">lezzetg@restaurant.com</a>
             <a href="tel:+905301118800">Booking Request : +90 530 111 88 00</a>
@@ -53,7 +57,7 @@ export default function Footer() {
           </address>
 
           {/* separator */}
-          <div className="flex gap-3 my-5">
+          <div className="flex gap-3 my-6">
             {[...Array(3)].map((_, i) => (
               <div
                 key={i}
@@ -62,7 +66,7 @@ export default function Footer() {
             ))}
           </div>
 
-          <div className="font-forum text-[var(--white)]">
+          <div className="font-forum text-[var(--white)] mb-7">
             <p className="text-3xl">Get News & Offers</p>
             <p className="text-[var(--quick-silver)]">
               Subscribe us & Get{" "}
@@ -71,27 +75,28 @@ export default function Footer() {
           </div>
 
           {/* Form */}
-          <form className="flex w-full max-w-md">
-            <div className="relative flex-1">
+          <form className="flex flex-col sm:flex-row w-full max-w-md mb-5 gap-5 md:gap-0">
+            <div className="relative flex-1 ">
               <ion-icon
                 name="mail-outline"
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-white"
+                className="absolute text-xl left-3 top-1/2 -translate-y-1/2 text-white"
               />
               <input
                 type="email"
                 placeholder="Your email"
                 className="
-                  w-full px-6 py-3 pl-10
+                  w-full px-5 py-5 pl-10
                   bg-[var(--smoky-black-1)]
                   border border-[var(--white-alpha-20)]
-                  text-white
+                  text-white 
                 "
               />
             </div>
             <Button
               text="Subscribe"
-              className="
-                px-6
+              className="w-full sm:w-auto
+              
+                px-5 py-5 
                 bg-[var(--gold-crayola)]
                 text-[var(--smoky-black-1)]
                 transition-colors
@@ -104,13 +109,15 @@ export default function Footer() {
         <ul
           className="col-span-2 md:col-span-1
           lg:col-span-1 lg:col-start-1
-          order-2 lg:order-1 mt-[105px]
-          flex flex-col gap-9 text-center"
+          order-2 lg:order-1 lg:mt-[140px]
+          flex flex-col gap-9 text-center
+          
+          "
         >
           {FooterLinks.map((item, index) => (
             <li
               className="
-              text-xs
+              text-xs 
               font-[var(--weight-bold)]
               tracking-[var(--letterSpacing-4)]
               "
@@ -127,28 +134,42 @@ export default function Footer() {
         <ul
           className="col-span-2 md:col-span-1 
           lg:col-span-1 lg:col-start-3
-          order-3 mt-[105px]
+          order-3 lg:mt-[140px]
           flex flex-col gap-9 text-center"
         >
           {mediaLinks.map((item, index) => (
             <li
               className="
-              text-xs
+              text-xs 
               font-[var(--weight-bold)]
               tracking-[var(--letterSpacing-4)]"
               key={index}
             >
-              <a
+              {/* <a
                 href={item.to}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[var(--gold-crayola)]"
+                className="text-[var(--quick-silver)] 
+                hover:text-[var(--gold-crayola)]
+                "
               >
                 {item.label}
-              </a>
+              </a> */}
+              <Link
+                to={item.to}
+                className="
+              hover:text-[var(--gold-crayola)]"
+              >
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
+      </div>
+      <div className="my-10 text-center">
+        <p className="text-m text-[var(--quick-silver)]">
+          &copy; 2022 Lezzet. All Rights Reserved
+        </p>
       </div>
     </footer>
   );

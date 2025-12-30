@@ -24,7 +24,7 @@ export const mediaLinks = [
     to: "https://youtube.com",
   },
     {
-    label: "GoogleMAp",
+    label: "Google Map",
     to: "https://googlemap.com",
   },
 ];
