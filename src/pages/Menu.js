@@ -7,7 +7,7 @@ import separator from "../assets/img/separator.svg";
 
 function Menu() {
   return (
-    <section className=" relative min-h-screen bg-[var(--eerie-black-1)] ">
+    <section id="menu" className=" relative min-h-screen bg-[var(--eerie-black-1)] ">
       <p
         className={`relative z-10 text-xs text-center py-10 font-bold uppercase tracking-[var(--letterSpacing-2)] text-[var(--gold-crayola)]
           `}

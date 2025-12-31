@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+
 import logo from "../assets/img/logo.svg";
 import Button from "./Home/ui/Button";
 
 export default function Header({ menuOpen, setMenuOpen }) {
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  //   scroll yukari 50 cekildi mi diye kontrol eder (headere bg eklemek icin)
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -11,6 +16,45 @@ export default function Header({ menuOpen, setMenuOpen }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  //   section %25 olarak ekranda gorunuyorsa onu active yap
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id], footer[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const activeLinkClass = `
+  relative
+  text-[var(--gold-crayola)]
+  after:content-['']
+  after:absolute after:left-0 after:-bottom-2
+  after:w-full after:border-b-2 after:border-[var(--gold-crayola)]
+
+  before:content-['']
+  before:absolute before:left-0 before:-bottom-4
+  before:w-full before:border-b-2 before:border-[var(--gold-crayola)]
+`;
+
+  const navItems = [
+    { id: "home", label: "Home" },
+    { id: "menu", label: "Menu" },
+    { id: "contact", label: "Contact" },
+  ];
+
   return (
     <header
       className={`
@@ -29,31 +73,109 @@ export default function Header({ menuOpen, setMenuOpen }) {
           <img src={logo} alt="lezzet"></img>
         </a>
 
-        <ul className="hidden lg:flex gap-8  text-white">
+        {/* <ul className="hidden lg:flex gap-8  text-white">
           <li>
-            <a href="#home" className="hover:text-[var(--gold-crayola)]">
+            <a
+              href="#home"
+              className={
+                activeSection === "home"
+                  ? activeLinkClass
+                  : "hover:text-[var(--gold-crayola)]"
+              }
+            >
               Home
             </a>
           </li>
           <li>
-            <a href="#menu" className="hover:text-[var(--gold-crayola)]">
+            <a
+              href="#menu"
+              className={
+                activeSection === "menu"
+                  ? activeLinkClass
+                  : "hover:text-[var(--gold-crayola)]"
+              }
+            >
               Menu
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-[var(--gold-crayola)]">
+            <a
+              href="#contact"
+              className={
+                activeSection === "contact"
+                  ? activeLinkClass
+                  : "hover:text-[var(--gold-crayola)]"
+              }
+            >
               Contact
             </a>
           </li>
           <li>
-            <a href="#register" className="hover:text-[var(--gold-crayola)]">
+            <NavLink
+              to="/register"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[var(--gold-crayola)] "
+                  : "hover:text-[var(--gold-crayola)]"
+              }
+            >
               Register
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#login" className="hover:text-[var(--gold-crayola)]">
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[var(--gold-crayola)] "
+                  : "hover:text-[var(--gold-crayola)]"
+              }
+            >
               Login
-            </a>
+            </NavLink>
+          </li>
+        </ul> */}
+
+        <ul className="hidden lg:flex gap-8 text-white">
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <a
+                href={`#${item.id}`}
+                className={
+                  activeSection === item.id
+                    ? activeLinkClass
+                    : "hover:text-[var(--gold-crayola)]"
+                }
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <ul className="hidden lg:flex gap-8 text-white ml-[-105px]">
+          <li>
+            <NavLink
+              to="/register"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[var(--gold-crayola)]"
+                  : "hover:text-[var(--gold-crayola)]"
+              }
+            >
+              Register
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[var(--gold-crayola)]"
+                  : "hover:text-[var(--gold-crayola)]"
+              }
+            >
+              Login
+            </NavLink>
           </li>
         </ul>
 

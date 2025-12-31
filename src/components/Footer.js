@@ -6,7 +6,7 @@ import { FooterLinks, mediaLinks } from "../data/FooterLinks";
 
 export default function Footer() {
   return (
-    <footer className="relative min-h-screen overflow-hidden">
+    <footer id="contact" className="relative min-h-screen overflow-hidden">
       {/* Background */}
       <img
         src={backPhoto}

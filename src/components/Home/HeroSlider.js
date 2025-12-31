@@ -24,7 +24,7 @@ function HeroSlider() {
     setCurrent((prev) => (prev === 0 ? total - 1 : prev - 1));
 
   return (
-    <section className="relative min-h-screen overflow-hidden ">
+    <section id="home" className="relative min-h-screen overflow-hidden ">
       {HeroSlides.map((slide, index) => (
         <Slider key={index} slide={slide} isActive={index === current} />
       ))}
