@@ -73,70 +73,7 @@ export default function Header({ menuOpen, setMenuOpen }) {
           <img src={logo} alt="lezzet"></img>
         </a>
 
-        {/* <ul className="hidden lg:flex gap-8  text-white">
-          <li>
-            <a
-              href="#home"
-              className={
-                activeSection === "home"
-                  ? activeLinkClass
-                  : "hover:text-[var(--gold-crayola)]"
-              }
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#menu"
-              className={
-                activeSection === "menu"
-                  ? activeLinkClass
-                  : "hover:text-[var(--gold-crayola)]"
-              }
-            >
-              Menu
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              className={
-                activeSection === "contact"
-                  ? activeLinkClass
-                  : "hover:text-[var(--gold-crayola)]"
-              }
-            >
-              Contact
-            </a>
-          </li>
-          <li>
-            <NavLink
-              to="/register"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[var(--gold-crayola)] "
-                  : "hover:text-[var(--gold-crayola)]"
-              }
-            >
-              Register
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/login"
-              className={({ isActive }) =>
-                isActive
-                  ? "text-[var(--gold-crayola)] "
-                  : "hover:text-[var(--gold-crayola)]"
-              }
-            >
-              Login
-            </NavLink>
-          </li>
-        </ul> */}
-
-        <ul className="hidden lg:flex gap-8 text-white">
+        <ul className="hidden lg:flex items-center gap-8 text-white">
           {navItems.map((item) => (
             <li key={item.id}>
               <a
@@ -151,8 +88,7 @@ export default function Header({ menuOpen, setMenuOpen }) {
               </a>
             </li>
           ))}
-        </ul>
-        <ul className="hidden lg:flex gap-8 text-white ml-[-105px]">
+
           <li>
             <NavLink
               to="/register"
@@ -165,6 +101,7 @@ export default function Header({ menuOpen, setMenuOpen }) {
               Register
             </NavLink>
           </li>
+
           <li>
             <NavLink
               to="/login"
@@ -180,41 +117,156 @@ export default function Header({ menuOpen, setMenuOpen }) {
         </ul>
 
         {/* open button mobile */}
-        <button onClick={() => setMenuOpen(true)} className="lg:hidden">
-          <span className="block w-7 h-[2px] bg-white mb-1"></span>
-          <span className="block w-7 h-[2px] bg-white mb-1"></span>
-          <span className="block w-7 h-[2px] bg-white mb-1"></span>
+        <button onClick={() => setMenuOpen(true)} className="lg:hidden ">
+          <span className="block w-7 h-[2px] bg-white mb-1 origin-left animate-menuBtn [animation-delay:10ms]"></span>
+          <span className="block w-7 h-[2px] bg-white mb-1 origin-left animate-menuBtn [animation-delay:150ms]"></span>
+          <span className="block w-7 h-[2px] bg-white mb-1 origin-left animate-menuBtn [animation-delay:300ms]"></span>
         </button>
+
         {/* navbar */}
         <nav
-          className={`
-        fixed top-0 left-0 h-full w-80 bg-[var(--smoky-black-1)]
-        transform transition-transform duration-300 z-50
-        ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
+          className={`mobile-menu py-10
+  fixed top-0 left-0
+  h-screen w-80
+  bg-[var(--smoky-black-1)]
+  transform transition-transform duration-300
+  overflow-y-auto
+  z-50
+  ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
         >
-          <button onClick={() => setMenuOpen(false)} className="text-white p-4">
+          <a
+            onClick={() => setMenuOpen(false)}
+            href="#home"
+            className="flex items-center justify-center my-7 "
+          >
+            <img src={logo} alt="lezzet"></img>
+          </a>
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="absolute top-4 right-4 text-white
+           w-7 h-7 border rounded-full"
+          >
             ✕
           </button>
-          <ul className="text-white mt-10 px-6 space-y-6">
-            <li>
+          {/* [&>li]  su demek oluyor ul > li { ... }
+           */}
+          <ul
+            className="
+         text-white mt-10 mx-9 
+
+           [&>li]:relative
+           [&>li]:flex
+           [&>li]:items-start
+           [&>li]:gap-3
+           [&>li]:py-3
+           [&>li]:border-t
+           [&>li]:border-[var(--white-alpha-20)]
+           [&>li]:w-[200px]
+       
+           /* before default (gizli) */
+           [&>li::before]:content-['']
+           [&>li::before]:mt-2
+           [&>li::before]:w-2
+           [&>li::before]:h-2
+           [&>li::before]:border
+           [&>li::before]:border-[var(--gold-crayola)]
+           [&>li::before]:rotate-45
+           [&>li::before]:opacity-0
+           [&>li::before]:scale-0
+           [&>li::before]:transition-all
+           [&>li::before]:duration-300
+       
+           /* hover olunca */
+           [&>li:hover::before]:opacity-100
+           [&>li:hover::before]:scale-100
+       
+           /* active (NavLink kullanıyorsan) */
+           [&>li.active::before]:opacity-100
+           [&>li.active::before]:scale-100
+
+           /* a default */
+           [&>li>a]:transition-all
+           [&>li>a]:duration-300
+       
+           /* hover → a */
+           [&>li:hover>a]:text-[var(--gold-crayola)]
+           [&>li:hover>a]:translate-x-5
+       
+           [&>li.active>a]:text-[var(--gold-crayola)]
+           [&>li.active>a]:translate-x-5
+  "
+          >
+            <li
+              className={`py-3 border-t border-[var(--white-alpha-20)] w-[200px]
+            ${activeSection === "home" ? "active" : ""}`}
+            >
               <a href="#home">Home</a>
             </li>
-            <li>
+
+            <li
+              className={`py-3 border-t border-[var(--white-alpha-20)] w-[200px]
+            ${activeSection === "menu" ? "active" : ""}`}
+            >
               <a href="#menu">Menu</a>
             </li>
-            <li>
+
+            <li
+              className={`py-3 border-t border-[var(--white-alpha-20)] w-[200px]
+             ${activeSection === "contact" ? "active" : ""}`}
+            >
               <a href="#contact">Contact</a>
             </li>
-            <li>
-              <a href="#register">Register</a>
+
+            <li className="py-3 border-t border-[var(--white-alpha-20)] w-[200px]">
+              <NavLink to="/login">Register</NavLink>
             </li>
-            <li>
-              <a href="#login">Login</a>
+            <li className="py-3 border-t border-[var(--white-alpha-20)] w-[200px]">
+              <NavLink to="/login">Login</NavLink>
             </li>
           </ul>
+
+          <div className="text-center mt-9">
+            <p className="text-white font-forum text-5xl">Visit us</p>
+            <address
+              className="
+            mt-6
+            text-[var(--quick-silver)]
+            leading-[var(--lineHeight-3)]
+            not-italic"
+            >
+              <span className="block">Restaurant Sk, Deniz City,</span>
+              <span className="block">Bursa 9578, Turkey</span>
+            </address>
+
+            <p className="text-[var(--quick-silver)] mt-6">
+              Open: 9.30 am - 2.30pm
+            </p>
+
+            <a
+              className="text-[var(--quick-silver)] mt-6"
+              href="milato:lezzetg@restaurant.com"
+            >
+              lezzetg@restaurant.com
+            </a>
+
+            <div
+              className="w-2 h-2 border border-[var(--gold-crayola)] rotate-45
+            my-7 mx-auto"
+            ></div>
+
+            <p className="text-[var(--quick-silver)] mt-6">Booking Request</p>
+
+            <a
+              href="tel:+5301118800"
+              className="text-[var(--gold-crayola)] mt-6"
+            >
+              + 530 111 88 00
+            </a>
+          </div>
         </nav>
 
         <Button
+          href="#reservation"
           text="Find a table"
           className=" hidden lg:inline-flex
         px-5 py-5 

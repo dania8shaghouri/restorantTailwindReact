@@ -93,6 +93,23 @@
   --transition-3: 1000ms ease;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+/* mobile menu scrollbar */
+.mobile-menu::-webkit-scrollbar {
+  width: 4px; /* kalınlık */
+}
+
+.mobile-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mobile-menu::-webkit-scrollbar-thumb {
+  background-color: var(--white-alpha-10); /* renk */
+  border-radius: 10px;
+}
+
 body {
   margin: 0;
   font-family: var(--fontFamily-dm_sans);

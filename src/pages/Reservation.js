@@ -7,6 +7,7 @@ import Button from "../components/Home/ui/Button";
 export default function Reservation(isActive) {
   return (
     <section
+      id="reservation"
       className="
      px-4 py-10
     sm:px-8
