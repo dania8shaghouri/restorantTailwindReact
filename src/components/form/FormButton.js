@@ -7,7 +7,7 @@ export default function FormButton({ text }) {
     bg-[var(--eerie-black-3)]
     rounded-md
     shadow-md shadow-[var(--quick-silver)]
-    transition
+    transition text-xl
     uppercase font-cursive font-semibold
   "
     >

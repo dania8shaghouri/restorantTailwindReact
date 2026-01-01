@@ -21,6 +21,7 @@ export default function FormInput({
         border-b border-[#212121]
         transition-transform
         duration-300
+        
         // focus
         focus:outline-none
         focus:border-[var(--gold-crayola)]
