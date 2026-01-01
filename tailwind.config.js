@@ -5,7 +5,9 @@ export default {
     extend: {
       fontFamily: {
         forum: ["var(--fontFamily-forum)", "serif"],
-        dm_sans: ["var(--fontFamily-dm_sans)", "sans-serif"],
+        cursive: ["cursive"],
+        nunito: ["Nunito"],
+        dmsans: ["var(--fontFamily-dm_sans)", "sans-serif"],
       },
       fontWeight: {
         regular: "var(--weight-regular)",

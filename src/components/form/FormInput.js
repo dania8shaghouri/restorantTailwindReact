@@ -14,8 +14,9 @@ export default function FormInput({
         onChange={onChange}
         placeholder={placeholder}
         className="
-        w-full mt-4 py-4
-        text-white placeholder:text-gray-400
+        w-full mt-4 py-3
+        text-white placeholder:text-[var(--quick-silver)]
+        placeholder:text-sm 
         bg-transparent
         border-b border-[#212121]
         transition-transform
@@ -24,6 +25,7 @@ export default function FormInput({
         focus:outline-none
         focus:border-[var(--gold-crayola)]
         focus:-translate-y-3
+        focus:placeholder:text-[var(--gold-crayola)]
        "
       ></input>
     </>

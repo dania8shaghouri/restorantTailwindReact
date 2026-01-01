@@ -42,6 +42,7 @@
   /* Typography */
   --fontFamily-forum: "Forum", cursive;
   --fontFamily-dm_sans: "DM Sans", sans-serif;
+  
 
   /* font size */
   --fontSize-display-1: calc(1.3rem + 6.7vw);

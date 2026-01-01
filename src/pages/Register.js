@@ -1,3 +1,5 @@
+import AuthHeader from "../components/form/AuthHeader";
+import FormButton from "../components/form/FormButton";
 import FormInput from "../components/form/FormInput";
 
 export default function Register() {
@@ -9,10 +11,25 @@ export default function Register() {
       <div
         className="w-[90%] max-w-[475px] 
       border border-[#d5d5d5] rounded-2xl
-      p-8 bg-[var(--eerie-black-1)]
+      px-8 py-12 bg-[var(--eerie-black-1)]
       "
       >
-        <form className="mt-6">
+        <AuthHeader />
+        <p
+          className="
+        text-[var(--gold-crayola)]
+        text-center p-5 
+        font-cursive uppercase font-bold tracking-[2px]"
+        >
+          Welcome
+        </p>
+        <p
+          className="text-[var(--gold-crayola)]
+         text-center font-cursive"
+        >
+          Please sign in to benefit from our reservation
+        </p>
+        <form className="mt-4">
           <div
             className="flex gap-4 
         "
@@ -24,6 +41,7 @@ export default function Register() {
           <FormInput type="tel" placeholder="Phone" />
           <FormInput type="password" placeholder="Password" />
           <FormInput type="password" placeholder="Confirm Password" />
+          <FormButton text="Register" />
         </form>
       </div>
     </section>
