@@ -218,7 +218,7 @@ export default function Header({ menuOpen, setMenuOpen }) {
             </li>
 
             <li className="py-3 border-t border-[var(--white-alpha-20)] w-[200px]">
-              <NavLink to="/login">Register</NavLink>
+              <NavLink to="/register">Register</NavLink>
             </li>
             <li className="py-3 border-t border-[var(--white-alpha-20)] w-[200px]">
               <NavLink to="/login">Login</NavLink>

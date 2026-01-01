@@ -1,0 +1,31 @@
+import FormInput from "../components/form/FormInput";
+
+export default function Register() {
+  return (
+    <section
+      className="min-h-screen bg-[var(--smoky-black-3)]
+    flex items-center justify-center"
+    >
+      <div
+        className="w-[90%] max-w-[475px] 
+      border border-[#d5d5d5] rounded-2xl
+      p-8 bg-[var(--eerie-black-1)]
+      "
+      >
+        <form className="mt-6">
+          <div
+            className="flex gap-4 
+        "
+          >
+            <FormInput placeholder="First Name" />
+            <FormInput placeholder="Last Name" />
+          </div>
+          <FormInput type="email" placeholder="Email" />
+          <FormInput type="tel" placeholder="Phone" />
+          <FormInput type="password" placeholder="Password" />
+          <FormInput type="password" placeholder="Confirm Password" />
+        </form>
+      </div>
+    </section>
+  );
+}
