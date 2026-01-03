@@ -7,13 +7,21 @@ import separator from "../assets/img/separator.svg";
 
 function Menu() {
   return (
-    <section id="menu" className=" relative min-h-screen bg-[var(--eerie-black-1)] ">
+    <section
+      id="menu"
+      className=" relative min-h-screen bg-[var(--eerie-black-1)] "
+    >
       <p
         className={`relative z-10 text-xs text-center py-10 font-bold uppercase tracking-[var(--letterSpacing-2)] text-[var(--gold-crayola)]
           `}
       >
         Special Selection
-        <img src={separator} alt="" className=" w-[100px] mx-auto py-4" />
+        <img
+          src={separator}
+          alt=""
+          loading="lazy"
+          className=" w-[100px] mx-auto py-4"
+        />
       </p>
 
       <h2

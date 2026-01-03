@@ -51,6 +51,7 @@ function HeroSlider() {
           className="mb-[6px]"
           width="60"
           height="60"
+          loading="lazy"
         />
         <span className="text-[var(--black)] font-bold uppercase text-center text-sm tracking-[var(--letterSpacing-1)]">
           Book A Table

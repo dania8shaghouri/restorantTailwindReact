@@ -70,7 +70,7 @@ export default function Header({ menuOpen, setMenuOpen }) {
       <div className="flex items-center justify-between  px-5 py-6 ">
         {/* logo */}
         <a href="#home">
-          <img src={logo} alt="lezzet"></img>
+          <img rel="preload" src={logo} alt="lezzet"></img>
         </a>
 
         <ul className="hidden lg:flex items-center gap-8 text-white">
@@ -139,7 +139,7 @@ export default function Header({ menuOpen, setMenuOpen }) {
             href="#home"
             className="flex items-center justify-center my-7 "
           >
-            <img src={logo} alt="lezzet"></img>
+            <img rel="preload" src={logo} alt="lezzet"></img>
           </a>
           <button
             onClick={() => setMenuOpen(false)}

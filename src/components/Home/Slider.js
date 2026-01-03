@@ -10,6 +10,7 @@ function Slider({ slide, isActive }) {
     >
       {/* Background Image with smooth scale */}
       <img
+        loading="lazy"
         src={slide.img}
         alt={slide.title}
         className={`w-full h-full object-cover transition-transform duration-[7000ms] ease-linear ${
@@ -35,6 +36,7 @@ function Slider({ slide, isActive }) {
           {slide.subtitle}
           <img
             src={separator}
+            loading="lazy"
             alt=""
             className="block w-[100px] mx-auto mt-[5px]"
           />

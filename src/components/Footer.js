@@ -9,6 +9,7 @@ export default function Footer() {
     <footer id="contact" className="relative min-h-screen overflow-hidden">
       {/* Background */}
       <img
+      loading="lazy"
         src={backPhoto}
         alt="footer background"
         className="absolute inset-0 w-full h-full object-cover -z-10"

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/img/logo.svg";
 
 import AuthHeader from "../components/form/AuthHeader";
@@ -18,7 +19,7 @@ export default function Login() {
           <p className="font-cursive font-bold text-md uppercase tracking-[2px]">
             welcome ugly
           </p>
-          <img className="" src={logo} alt="logo" />
+          <img className="" src={logo} alt="logo" rel="preload" />
           <p>Please log in to benefit from our reservation</p>
         </div>
         <form className="mt-4">
@@ -57,13 +58,13 @@ export default function Login() {
               remember me
             </label>
 
-            <a
-              href="#"
+            <Link
+              to="/forget-password"
               className="
             text-[var(--gold-crayola)]"
             >
               Forgot password
-            </a>
+            </Link>
           </div>
           <FormButton text="Login" />
         </form>
