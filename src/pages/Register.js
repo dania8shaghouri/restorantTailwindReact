@@ -14,7 +14,7 @@ export default function Register() {
       px-8 py-12 bg-[var(--eerie-black-1)]
       "
       >
-        <AuthHeader text="Register"/>
+        <AuthHeader type="register" />
         <p
           className="
         text-[var(--gold-crayola)]

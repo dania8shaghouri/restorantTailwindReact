@@ -13,7 +13,7 @@ export default function Login() {
         className="bg-[var(--eerie-black-1)] w-[90%] max-w-[475px] 
       border border-[#d5d5d5] rounded-2xl px-8 py-12"
       >
-        <AuthHeader text="Login" />
+        <AuthHeader type="login" />
         <div className="flex flex-col items-center mt-6 gap-7 ">
           <p className="font-cursive font-bold text-md uppercase tracking-[2px]">
             welcome ugly

@@ -1,7 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaRightToBracket } from "react-icons/fa6";
-export default function AuthHeader({ text }) {
+
+export default function AuthHeader({ type }) {
   const navigate = useNavigate();
+  const isLogin = type === "login";
   return (
     <div className="flex justify-between">
       <button
@@ -13,10 +15,13 @@ export default function AuthHeader({ text }) {
       </button>
 
       {/* Login Link */}
-      <Link to="/login" className="text-center text-[var(--gold-crayola)]">
+      <Link
+        to={isLogin ? "/register" : "/login"}
+        className="text-center text-[var(--gold-crayola)]"
+      >
         <FaRightToBracket size={20} />
-        <span className="text-sm capitalize mt-1 font-dmsans font-bold">
-          {text}
+        <span className="text-sm capitalize mt-1 font-dmsans font-bold ">
+          {isLogin ? "register" : "login"}
         </span>
       </Link>
     </div>
