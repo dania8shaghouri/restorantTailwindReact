@@ -9,7 +9,7 @@ export default function Footer() {
     <footer id="contact" className="relative min-h-screen overflow-hidden">
       {/* Background */}
       <img
-      loading="lazy"
+        loading="lazy"
         src={backPhoto}
         alt="footer background"
         className="absolute inset-0 w-full h-full object-cover -z-10"
@@ -21,15 +21,15 @@ export default function Footer() {
           relative z-10
           grid grid-cols-2 gap-y-12 gap-x-8
           md:grid-cols-2
-          lg:grid-cols-3 
+          lg:grid-cols-3
           w-full
           lg:min-w-full lg:max-h-[100vh]
            md:max-w-3xl
           mx-auto
-          py-20 
+          py-20
           text-[var(--quick-silver)]
-          text-sm uppercase 
-          
+          text-sm uppercase
+
         "
       >
         {/* BRAND — grid-column: 1 / 3 */}
@@ -43,7 +43,7 @@ export default function Footer() {
             bg-[url('/form-pattern.png')]
             bg-top bg-repeat
             px-10 py-14
-            
+
           "
         >
           <Link to="/">
@@ -58,7 +58,7 @@ export default function Footer() {
           </address>
 
           {/* separator */}
-          <div className="flex gap-3 my-6">
+          <div className="flex gap-2 my-6">
             {[...Array(3)].map((_, i) => (
               <div
                 key={i}
@@ -89,15 +89,15 @@ export default function Footer() {
                   w-full px-5 py-5 pl-10
                   bg-[var(--smoky-black-1)]
                   border border-[var(--white-alpha-20)]
-                  text-white 
+                  text-white
                 "
               />
             </div>
             <Button
               text="Subscribe"
               className="w-full sm:w-auto
-              
-                px-5 py-5 
+
+                px-5 py-5
                 bg-[var(--gold-crayola)]
                 text-[var(--smoky-black-1)]
                 transition-colors
@@ -112,13 +112,13 @@ export default function Footer() {
           lg:col-span-1 lg:col-start-1
           order-2 lg:order-1 lg:mt-[140px]
           flex flex-col gap-9 text-center
-          
+
           "
         >
           {FooterLinks.map((item, index) => (
             <li
               className="
-              text-xs 
+              text-xs
               font-[var(--weight-bold)]
               tracking-[var(--letterSpacing-4)]
               "
@@ -133,7 +133,7 @@ export default function Footer() {
 
         {/* SOCIAL LINKS */}
         <ul
-          className="col-span-2 md:col-span-1 
+          className="col-span-2 md:col-span-1
           lg:col-span-1 lg:col-start-3
           order-3 lg:mt-[140px]
           flex flex-col gap-9 text-center"
@@ -141,7 +141,7 @@ export default function Footer() {
           {mediaLinks.map((item, index) => (
             <li
               className="
-              text-xs 
+              text-xs
               font-[var(--weight-bold)]
               tracking-[var(--letterSpacing-4)]"
               key={index}
@@ -150,7 +150,7 @@ export default function Footer() {
                 href={item.to}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--quick-silver)] 
+                className="text-[var(--quick-silver)]
                 hover:text-[var(--gold-crayola)]
                 "
               >
@@ -167,6 +167,7 @@ export default function Footer() {
           ))}
         </ul>
       </div>
+
       <div className="my-10 text-center">
         <p className="text-m text-[var(--quick-silver)]">
           &copy; 2022 Lezzet. All Rights Reserved

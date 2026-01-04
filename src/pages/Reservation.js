@@ -9,7 +9,7 @@ export default function Reservation(isActive) {
     <section
       id="reservation"
       className="
-     px-4 py-10
+    px-4 py-10
     sm:px-8
     lg:p-20
     bg-[var(--eerie-black-1)]
@@ -18,9 +18,9 @@ export default function Reservation(isActive) {
     w-full
   "
     >
-      <section
+      <div
         className=" 
-            py-10 px-4
+    py-10 px-4
     sm:px-8
     lg:py-[75px] lg:px-[60px]
     bg-[var(--smoky-black-2)]
@@ -28,7 +28,6 @@ export default function Reservation(isActive) {
     gap-6 sm:gap-8 lg:gap-[80px]
     max-w-7xl w-full
     shadow-lg
-      
     "
       >
         <div className="">
@@ -56,6 +55,9 @@ export default function Reservation(isActive) {
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4">
+            {/* uzun uzun yazmak yerine spread ile yazmak
+ <Inputs type={f.type} icon={f.icon}....vs => <Inputs {...f} /> */}
+
             {formFields.map((f, i) => (
               <Inputs key={i} {...f} />
             ))}
@@ -190,7 +192,7 @@ export default function Reservation(isActive) {
             <span className="block">05.00 pm - 10.00pm</span>
           </p>
         </div>
-      </section>
+      </div>
     </section>
   );
 }

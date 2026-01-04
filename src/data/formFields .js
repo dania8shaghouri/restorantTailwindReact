@@ -24,6 +24,7 @@ export const selects = [
     ],
   },
 ];
+
 export const datetimeInput = {
   icon: IoCalendarClearOutline,
   type: "datetime-local",

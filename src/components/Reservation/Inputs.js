@@ -1,8 +1,10 @@
+// props.icon → bileşen içinde Icon adıyla kullanılır
 export default function Input({ icon: Icon, type = "text", placeholder }) {
   const isDateTime = type === "datetime-local";
 
   return (
     <div className={`relative ${isDateTime ? "group" : ""}`}>
+      {/* Icon prop’u varsa render edilir, yoksa hiç render edilmez. */}
       {Icon && (
         <Icon
           className={` 
@@ -27,7 +29,7 @@ export default function Input({ icon: Icon, type = "text", placeholder }) {
           text-base
           sm:text-lg
           placeholder:text-sm
-           placeholder:text-[var(--white)]
+          placeholder:text-[var(--white)]
           bg-[var(--eerie-black-2)] text-[var(--white)]
           border border-[var(--white-alpha-10)]
           px-4 py-4 w-full
