@@ -8,13 +8,13 @@ Modern, responsive ve kullanıcı dostu bir restoran uygulaması. Menü listelem
 
 ## Özellikler
 
-Responsive tasarım (mobil / tablet / desktop)
-Menü listeleme sistemi
-Kategori bazlı filtreleme
-Sepet mantığı 
-Hızlı ve modern UI (Tailwind CSS)
-Component bazlı React mimarisi
-Temiz ve ölçeklenebilir proje yapısı
+- Responsive tasarım (mobil / tablet / desktop)
+- Menü listeleme sistemi
+- Kategori bazlı filtreleme
+- Sepet mantığı 
+- Hızlı ve modern UI (Tailwind CSS)
+- Component bazlı React mimarisi
+- Temiz ve ölçeklenebilir proje yapısı
 
 
 
