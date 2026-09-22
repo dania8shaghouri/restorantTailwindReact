@@ -156,13 +156,6 @@ npm run build
 
 Creates an optimized production build.
 
-### Run Tests
-
-```bash
-npm test
-```
-
-Runs the test suite in interactive watch mode.
 
 ---
 
