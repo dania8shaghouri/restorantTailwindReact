@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🍽️ Restaurant App
 
 Modern, responsive and user-friendly **restaurant showcase application** built with React.
@@ -167,10 +166,3 @@ Runs the test suite in interactive watch mode.
 
 ---
 
-
-
-
-
-
-
->>>>>>> 2d9c0dcb3c9ff413de2246ea7bbf5cd6237b1c75
